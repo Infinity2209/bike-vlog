@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const tabs = [
     { id: "research", label: "Research" },
@@ -52,7 +53,7 @@ export default function AfterTestimonialsSection() {
                         </a>
                     </div>
                     <div className="col-span-6 h-[700px] w-[700px] ml-[8rem] mt-[3rem]">
-                        <img src="/hand1.png" alt="Handshake" className="rounded-md shadow-md" />
+                        <Image src="/hand1.png" alt="Handshake" width={700} height={700} className="rounded-md shadow-md" />
                     </div>
                 </div>
 
@@ -92,7 +93,7 @@ export default function AfterTestimonialsSection() {
                         </div>
                     </div>
                     <div className="col-span-6 w-[800px] p-6 ml-[5rem] mt-[-25rem]">
-                        <img src="/hand2.png" alt="Handshake 2" className="rounded-md shadow-md" />
+                        <Image src="/hand2.png" alt="Handshake 2" width={700} height={700} className="rounded-md shadow-md" />
                     </div>
                 </div>
             </div>

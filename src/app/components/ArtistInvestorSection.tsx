@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function ArtistInvestorSection() {
     return (
@@ -14,10 +15,12 @@ export default function ArtistInvestorSection() {
 
             <div className=" mx-auto grid grid-cols-12 gap-8 items-center">
                 <div className="col-span-7 h-[900px] w-[1100px] overflow-hidden ml-[4rem]">
-                    <img
+                    <Image
                         src="/hand3.png"
                         alt="Group of bikers"
                         className="rounded-md shadow-md w-full object-fit-cover h-full"
+                        width={1100}
+                        height={900}
                     />
                 </div>
 

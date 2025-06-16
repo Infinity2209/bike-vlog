@@ -14,6 +14,7 @@ import Pathway from "./components/Pathway";
 import ArtistInvestorSection from "./components/ArtistInvestorSection";
 import FAQSection from "./components/FAQSection";
 import FooterSection from "./components/FooterSection";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <PhoneSection />
       <BikeCollageSection />
       <Provided />
+      <Testimonials />
       <Pathway />
       <ArtistInvestorSection />
       <FAQSection />

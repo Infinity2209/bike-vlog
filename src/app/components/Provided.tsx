@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function AfterBikeCollageSection() {
     return (
@@ -8,9 +9,11 @@ export default function AfterBikeCollageSection() {
                     <div className="grid grid-cols-12 gap-6 items-center">
                         {/* Left side - Image */}
                         <div className="col-span-6 mt-[-10rem]">
-                            <img
+                            <Image
                                 src="/lorem.png"
                                 alt="Lorem"
+                                width={768}
+                                height={1000}
                                 className="w-[96%] h-[1000px] object-cover rounded-md shadow-md"
                             />
                         </div>

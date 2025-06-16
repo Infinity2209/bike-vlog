@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const bikeImages = [
     "/bike/bike1.png",
@@ -43,30 +44,30 @@ export default function BikeCollageSection() {
                         <div className="grid grid-cols-4 gap-1 h-106">
                             {/* Top row - 2 small images */}
                             <div className="col-span-2 h-60 w-40 relative overflow-hidden shadow-md ml-[16rem]">
-                                <img src={bikeImages[0]} alt="Bike 1" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[0]} alt="Bike 1" className="w-full h-full object-cover" width={160} height={120} />
                             </div>
                             <div className="col-span-2 h-60 w-120 relative overflow-hidden shadow-md">
-                                <img src={bikeImages[1]} alt="Bike 2" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[1]} alt="Bike 2" className="w-full h-full object-cover" width={480} height={120} />
                             </div>
                             {/* Second row - 1 small + 1 large image */}
                             <div className="col-span-2 h-60 w-40 relative overflow-hidden shadow-md mt-[-3rem] ml-[3rem]">
-                                <img src={bikeImages[2]} alt="Bike 3" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[2]} alt="Bike 3" className="w-full h-full object-cover" width={160} height={120} />
                             </div>
                             <div className="col-span-2 h-90 w-175 relative overflow-hidden shadow-md ml-[-13rem]">
-                                <img src={bikeImages[3]} alt="Bike 4" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[3]} alt="Bike 4" className="w-full h-full object-cover" width={420} height={180} />
                             </div>
                             {/* Third row - 1 tall image + 2 small images */}
                             <div className="col-span-2 h-90 w-40 relative overflow-hidden shadow-md mt-[-16rem] ml-[-25rem]">
-                                <img src={bikeImages[4]} alt="Bike 5" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[4]} alt="Bike 5" className="w-full h-full object-cover" width={160} height={180} />
                             </div>
                             <div className="col-span-2 h-70 w-110 relative overflow-hidden shadow-md mt-[-10rem] ml-[-41rem]">
-                                <img src={bikeImages[5]} alt="Bike 6" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[5]} alt="Bike 6" className="w-full h-full object-cover" width={280} height={140} />
                             </div>
                             <div className="col-span-4 h-25 w-90 relative overflow-hidden shadow-md ml-[14rem] mt-[-7rem]">
-                                <img src={bikeImages[6]} alt="Bike 7" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[6]} alt="Bike 7" className="w-full h-full object-cover" width={360} height={60} />
                             </div>
                             <div className="col-span-4 h-25 w-80 relative overflow-hidden shadow-md ml-[37rem] mt-[-7.2rem]">
-                                <img src={bikeImages[7]} alt="Bike 8" className="w-full h-full object-cover" />
+                                <Image src={bikeImages[7]} alt="Bike 8" className="w-full h-full object-cover" width={320} height={60} />
                             </div>
                         </div>
                     </div>
