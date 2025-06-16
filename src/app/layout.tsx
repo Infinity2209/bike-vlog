@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
-import { motion, AnimatePresence } from "framer-motion";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,23 +44,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              key="loader"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-white"
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full"
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isLoading && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-white animate-spin">
+            <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full" />
+          </div>
+        )}
         {children}
       </body>
     </html>

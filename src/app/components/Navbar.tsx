@@ -1,23 +1,12 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 const dropdownItems = [
     "Lorem Ipsum 1",
     "Lorem Ipsum 2",
     "Lorem Ipsum 3",
 ];
-
-const buttonVariants = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-    tap: { scale: 0.95 },
-};
-
-const dropdownVariants = {
-    hidden: { opacity: 0, y: -10, pointerEvents: "none" },
-    visible: { opacity: 1, y: 0, pointerEvents: "auto", transition: { duration: 0.3 } },
-};
 
 export default function Header() {
     return (
@@ -26,11 +15,8 @@ export default function Header() {
             <nav className="flex space-x-6 mr-[5rem] flex-wrap">
                 {dropdownItems.map((item, idx) => (
                     <div key={idx} className="relative group cursor-pointer">
-                        <motion.button
-                            className="flex items-center space-x-1 font-medium focus:outline-none"
-                            whileHover="hover"
-                            whileTap="tap"
-                            variants={buttonVariants}
+                        <button
+                            className="flex items-center space-x-1 font-medium focus:outline-none transform transition-transform duration-300 hover:scale-105 active:scale-95"
                         >
                             <span>{item}</span>
                             <svg
@@ -43,30 +29,24 @@ export default function Header() {
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </motion.button>
-                        <motion.div
-                            className="absolute left-0 top-full mt-2 w-40 bg-white rounded-md shadow-lg z-50"
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                            variants={dropdownVariants}
+                        </button>
+                        <div
+                            className="absolute left-0 top-full mt-2 w-40 bg-white rounded-md shadow-lg z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300"
                         >
                             <ul className="py-2">
                                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Submenu 1</li>
                                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Submenu 2</li>
                                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Submenu 3</li>
                             </ul>
-                        </motion.div>
+                        </div>
                     </div>
                 ))}
             </nav>
-            <motion.div
-                className="bg-white text-black shadow-md px-4 py-2 mr-5 rounded-xl text-sm font-semibold hover:bg-gray-100 z-30 cursor-pointer transition-colors duration-300 active:scale-95"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <div
+                className="bg-white text-black shadow-md px-4 py-2 mr-5 rounded-xl text-sm font-semibold hover:bg-gray-100 z-30 cursor-pointer transition-colors duration-300 active:scale-95 transform hover:scale-105"
             >
                 Sign In
-            </motion.div>
+            </div>
         </header>
     );
 }
