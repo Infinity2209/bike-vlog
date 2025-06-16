@@ -49,7 +49,7 @@ export default function QuoteSection() {
         }
     }, [isSubmitSuccessful, reset]);
 
-    const onSubmit = (data: QuoteFormData) => {
+    const onSubmit = () => {
         alert("Form submitted!");
         reset(); // Reset the form after submission
         setShowConfirmation(true); // Show confirmation message

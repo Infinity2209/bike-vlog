@@ -1,0 +1,10 @@
+alert("Form submitted!");
+        reset(); // Reset the form after submission
+        setShowConfirmation(true); // Show confirmation message
+    };
+=======
+    const onSubmit = () => {
+        alert("Form submitted!");
+        reset(); // Reset the form after submission
+        setShowConfirmation(true); // Show confirmation message
+    };
