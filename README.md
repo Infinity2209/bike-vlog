@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Web Application
 
-## Getting Started
+A modern web application built with Next.js and React, featuring smooth animations, responsive design, and interactive form handling. This project leverages powerful libraries such as framer-motion for animations, react-hook-form with zod for form validation, and Tailwind CSS for styling.
 
-First, run the development server:
+---
+
+## Table of Contents
+
+- [My Web Application](#my-web-application)
+  - [Table of Contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [Tech Stack](#tech-stack)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Project Structure](#project-structure)
+  - [Key Features](#key-features)
+  - [License](#license)
+
+---
+
+## Project Description
+
+This web application is designed to provide an engaging user experience through animated components and well-structured content sections. It includes multiple feature-rich sections such as bike showcases, environment highlights, testimonials, FAQs, and pathways for artists and investors. The app is built with scalability and maintainability in mind using Next.js's app directory structure and React components.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15.3.3  
+- **Language:** TypeScript & React 19.0.0  
+- **Styling:** Tailwind CSS 4  
+- **Animations:** framer-motion 10.18.0  
+- **Form Handling:** react-hook-form 7.58.0 with zod 3.25.64 for schema validation  
+- **Linting:** ESLint with Next.js config  
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://your-repository-url.git
+   cd web-application
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+---
+
+## Running the Application
+
+To start the development server with hot reloading and Turbopack:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build the application for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To start the production server:
 
-## Learn More
+```bash
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+To run the linter:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app/` - Main application directory containing pages and components  
+- `src/app/page.tsx` - Entry point for the home page, assembling multiple content sections  
+- `src/app/components/` - Reusable React components for different sections such as Navbar, BikeSection, FeatureSection, FAQSection, FooterSection, and more  
+- `src/app/hooks/` - Custom React hooks (e.g., `useScrollAnimation`)  
+- `public/` - Static assets including images, icons, and logos  
+- Configuration files for Next.js, Tailwind CSS, ESLint, and TypeScript at the root  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Key Features
+
+- **Animated UI:** Smooth animations powered by framer-motion for engaging user interactions  
+- **Responsive Design:** Built with Tailwind CSS to ensure the app looks great on all devices  
+- **Form Validation:** Robust form handling using react-hook-form and zod for schema validation  
+- **Modular Components:** Well-structured React components for easy maintenance and scalability  
+- **SEO Friendly:** Metadata and structured data included for better search engine indexing  
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
